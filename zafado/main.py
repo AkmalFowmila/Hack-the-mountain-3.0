@@ -1,4 +1,3 @@
-from xml.etree.ElementTree import Comment
 from flask import *
 import smtplib
 from email.mime.text import MIMEText
@@ -257,5 +256,5 @@ def addaquery(mailid, time):
             return redirect(url_for('queries'))
     else:
         return render_template("addquery.html", info="")
-
-app.run(host='192.168.43.246', debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
